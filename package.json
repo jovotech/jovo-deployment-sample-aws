@@ -1,0 +1,31 @@
+{
+  "name": "jovo-deployment-sample-aws",
+  "private": true,
+  "author": "jovotech",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "rimraf": "rimraf ./dist",
+    "prebuild": "npm run rimraf",
+    "build": "tsc",
+    "prewatch": "npm run rimraf",
+    "watch": "tsc -w",
+    "start": "node ./dist"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.831.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.19.15",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}
