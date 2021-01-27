@@ -34,6 +34,13 @@ const program = new Program();
 
   // setup everything with passed configuration
   return program.run({
+    credentials:
+      process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY
+        ? {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+          }
+        : undefined,
     region: process.env.AWS_REGION!,
     lambda: {
       functionName: process.env.LAMBDA_FUNCTION_NAME!,
