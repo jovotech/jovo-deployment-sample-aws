@@ -35,6 +35,10 @@ import { promises } from 'fs';
 
 const bundleBuffer = promises.readFile('path/to/bundle.zip');
 const config: RunConfiguration = {
+  credentials: {
+     accessKeyId: '$ACCESS_KEY_ID',
+     secretAccessKey: '$SECRET_ACCESS_KEY',
+  },
   region: 'eu-central-1',
   lambda: {
     functionName: 'automatic-test',
